@@ -37,7 +37,9 @@ Source0:        %{gosource}
 %goprep
 # remove all modules but compute/metadata
 find %{_builddir}/google-cloud-go-compute-metadata-v%{version}/* -depth -type d -not -path '*/compute*' -not -path '*/_build*' -exec rm -rf {} \;
-for i in aliasshim apiv1 internal; do rm -rf %{_builddir}/google-cloud-go-compute-metadata-v%{version}/compute/$i; done
+for i in aliasshim apiv1 internal; do rm -rf compute/$i; done
+rm doc.go
+mv compute/metadata/* .
 
 %if %{without bootstrap}
 %generate_buildrequires
