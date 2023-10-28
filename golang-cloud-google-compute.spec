@@ -37,6 +37,8 @@ Source0:        %{gosource}
 %goprep
 # remove all modules but compute
 find %{_builddir}/google-cloud-go-compute-v%{version}/* -depth -type d -not -path '*/compute*' -not -path '*/_build*' -exec rm -rf {} \;
+rm doc.go
+mv compute/* .
 
 %if %{without bootstrap}
 %generate_buildrequires
