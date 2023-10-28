@@ -37,6 +37,7 @@ Source0:        %{gosource}
 %goprep
 # remove all modules but storage
 find %{_builddir}/google-cloud-go-storage-v%{version}/* -depth -type d -not -path '*/storage' -not -path '*/_build*' -exec rm -rf {} \;
+rm -rf %{_builddir}/google-cloud-go-storage-v%{version}/internal/benchmarks
 
 %if %{without bootstrap}
 %generate_buildrequires
