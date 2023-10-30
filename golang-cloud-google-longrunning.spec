@@ -2,7 +2,7 @@
 %bcond_with check
 %bcond_with bootstrap
 %global debug_package %{nil}
-%global module secretmanager
+%global module longrunning
 
 %if %{with bootstrap}
 %global __requires_exclude %{?__requires_exclude:%{__requires_exclude}|}^golang\\(.*\\)$
