@@ -4,6 +4,10 @@
 %global debug_package %{nil}
 %global module pubsub
 
+%if %{with bootstrap}
+%global __requires_exclude %{?__requires_exclude:%{__requires_exclude}|}^golang\\(.*\\)$
+%endif
+
 # https://github.com/GoogleCloudPlatform/google-cloud-go
 %global goipath         cloud.google.com/go/%{module}
 %global forgeurl        https://github.com/GoogleCloudPlatform/google-cloud-go

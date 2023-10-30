@@ -3,6 +3,10 @@
 %bcond_with bootstrap
 %global debug_package %{nil}
 
+%if %{with bootstrap}
+%global __requires_exclude %{?__requires_exclude:%{__requires_exclude}|}^golang\\(.*\\)$
+%endif
+
 # https://github.com/GoogleCloudPlatform/google-cloud-go
 %global goipath         cloud.google.com/go
 %global forgeurl        https://github.com/GoogleCloudPlatform/google-cloud-go
