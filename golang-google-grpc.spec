@@ -61,8 +61,10 @@ done
 
 %install
 %gopkginstall
+%if %{without bootstrap}
 install -m 0755 -vd                     %{buildroot}%{_bindir}
 install -m 0755 -vp %{gobuilddir}/bin/* %{buildroot}%{_bindir}/
+%endif
 
 %if %{without bootstrap}
 %if %{with check}
