@@ -41,7 +41,7 @@ Source:         %{gosource}
 %autopatch -p1
 # As this is a submodule, use "-name compute" rather than module as in other specs
 find . ! \( -name compute -o -name "*.md" -o -name LICENSE -o -name _build \) -maxdepth 1 -exec rm -rvf {} \;
-mv %{module}/metadata/* .
+mv compute/metadata/* .
 rm -rfv compute
 
 %if %{without bootstrap}
