@@ -15,7 +15,7 @@ Version:                1.10.3
 %global tag             %{module}/v%{version}
 %global distprefix      %{nil}
 
-%gometa -L
+%gometa
 
 %global common_description %{expand:
 Google Cloud Client Libraries for Go for module %{module}.}
