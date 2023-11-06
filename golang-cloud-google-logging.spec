@@ -57,7 +57,7 @@ mv %{module}/* .
 %if %{with check}
 %check
 ln -s /usr/share/gocode/src/cloud.google.com/go/internal _build/src/cloud.google.com/go/
-%gocheck
+%gocheck -d cloud.google.com/go/logging/logadmin
 %endif
 %endif
 
