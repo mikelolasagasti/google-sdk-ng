@@ -43,7 +43,7 @@ find . ! \( -name %{module} -o -name "*.md" -o -name LICENSE -o -name _build \) 
 mv %{module}/* .
 
 # avoid extra dependencies
-rm -rf integration_test.go dataset_integration_test.go
+rm -rf integration_test.go dataset_integration_test.go routine_integration_test.go params_test.go oc_test.go dataset_test.go
 
 %if %{without bootstrap}
 %generate_buildrequires
