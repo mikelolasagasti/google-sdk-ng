@@ -3,7 +3,7 @@
 %bcond_with bootstrap
 %global debug_package %{nil}
 
-%if %{with bootstrap}
+%if %{without bootstrap}
 %global __requires_exclude %{?__requires_exclude:%{__requires_exclude}|}^golang\\(.*\\)$
 %endif
 

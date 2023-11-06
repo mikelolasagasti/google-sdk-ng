@@ -4,7 +4,7 @@
 %global debug_package %{nil}
 %global module bigquery
 
-%if %{with bootstrap}
+%if %{without bootstrap}
 %global __requires_exclude %{?__requires_exclude:%{__requires_exclude}|}^golang\\(.*\\)$
 %endif
 
