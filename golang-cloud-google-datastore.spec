@@ -42,6 +42,9 @@ Source:         %{gosource}
 find . ! \( -name %{module} -o -name "*.md" -o -name LICENSE -o -name _build \) -maxdepth 1 -exec rm -rf {} \;
 mv %{module}/* .
 
+# avoid extra dependencies
+rm -rf ./integration_test.go
+
 %if %{without bootstrap}
 %generate_buildrequires
 %go_generate_buildrequires
