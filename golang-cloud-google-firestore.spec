@@ -33,7 +33,7 @@ URL:            %{gourl}
 Source:         %{gosource}
 
 # for check
-BuildRequires:  golang-x-xerrors
+BuildRequires:  golang(golang.org/x/xerrors)
 
 %description %{common_description}
 
