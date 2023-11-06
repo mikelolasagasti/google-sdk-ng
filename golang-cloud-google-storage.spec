@@ -44,6 +44,7 @@ mv %{module}/* .
 
 # avoid extra dependencies
 rm -rf internal/benchmarks
+rm -rf ./integration_test.go
 
 %if %{without bootstrap}
 %generate_buildrequires
