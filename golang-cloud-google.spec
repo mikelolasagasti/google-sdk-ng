@@ -42,7 +42,6 @@ Source:         %{gosource}
 # Replace versioned module
 sed -i 's|github.com/google/go-github/v52|github.com/google/go-github|' $(find . -iname '*.go' -type f)
 
-
 find . ! \( -name internal -o -name "*.md" -o -name LICENSE -o -name _build \) -maxdepth 1 -exec rm -rf {} \;
 
 %if %{without bootstrap}
@@ -56,7 +55,6 @@ find . ! \( -name internal -o -name "*.md" -o -name LICENSE -o -name _build \) -
 %if %{without bootstrap}
 %if %{with check}
 %check
-ln -s /usr/share/gocode/src/cloud.google.com/go/internal _build/src/cloud.google.com/go/
 for test in "TestRetryPreserveError" "TestGolden" \
 ; do
 awk -i inplace '/^func.*'"$test"'\(/ { print; print "\tt.Skip(\"disabled failing test\")"; next}1' $(grep -rl $test)
