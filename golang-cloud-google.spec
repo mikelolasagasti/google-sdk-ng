@@ -42,7 +42,7 @@ Source:         %{gosource}
 # Replace versioned module
 sed -i 's|github.com/google/go-github/v52|github.com/google/go-github|' $(find . -iname '*.go' -type f)
 
-find . ! \( -name internal -o -name "*.md" -o -name LICENSE -o -name _build \) -maxdepth 1 -exec rm -rf {} \;
+find . ! \( -name internal -o -name civil -o -name "*.md" -o -name LICENSE -o -name _build \) -maxdepth 1 -exec rm -rf {} \;
 
 %if %{without bootstrap}
 %generate_buildrequires
