@@ -32,9 +32,6 @@ License:        Apache-2.0 AND BSD-3-Clause
 URL:            %{gourl}
 Source:         %{gosource}
 
-# for check
-BuildRequires:  golang(golang.org/x/xerrors)
-
 %description %{common_description}
 
 %gopkg
