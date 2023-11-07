@@ -4,7 +4,7 @@
 %global debug_package %{nil}
 %global module logging
 
-%if %{without bootstrap}
+%if %{with bootstrap}
 %global __requires_exclude %{?__requires_exclude:%{__requires_exclude}|}^golang\\(.*\\)$
 %endif
 
