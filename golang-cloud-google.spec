@@ -39,11 +39,8 @@ Source:         %{gosource}
 %goprep
 %autopatch -p1
 
-# Replace versioned module
-#sed -i 's|github.com/google/go-github/v52|github.com/google/go-github|' $(find . -iname '*.go' -type f)
-
 find . ! \( -name internal -o -name civil -o -name "*.md" -o -name LICENSE -o -name _build \) -maxdepth 1 -exec rm -rf {} \;
-# TODO check if modules that pull github.com/go-git/go-git/v5 & github.com/google/go-github are required
+# Remove modules requiring extra deps
 rm -rf internal/postprocessor internal/gapicgen
 
 %if %{without bootstrap}
