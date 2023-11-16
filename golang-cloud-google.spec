@@ -11,7 +11,6 @@
 %global goipath         cloud.google.com/go
 %global forgeurl        https://github.com/GoogleCloudPlatform/google-cloud-go
 Version:                0.110.9
-%global tag             v0.110.9
 %global distprefix      %{nil}
 
 %gometa
