@@ -25,7 +25,7 @@ APIs.}
 
 Name:           golang-google-genproto-googleapis
 Version:        0
-Release:        %autorelease
+Release:        %autorelease -b 100
 Summary:        Generated code for Google Cloud client libraries
 
 # Upstream license specification: Apache-2.0
