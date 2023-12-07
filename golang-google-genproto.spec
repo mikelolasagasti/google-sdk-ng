@@ -41,7 +41,8 @@ Source0:        %{gosource}
 %prep
 %goprep
 %autopatch -p1
-rm -rf api/apikeys api/servicecontrol api/servicemanagement api/serviceusage
+# These are managed with their own specs
+rm -rf googleapis/api/apikeys googleapis/api/servicecontrol googleapis/api/servicemanagement googleapis/api/serviceusage
 
 %if %{without bootstrap}
 %generate_buildrequires
