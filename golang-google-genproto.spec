@@ -23,7 +23,7 @@ APIs.}
 %global godocs          CODE_OF_CONDUCT.md CONTRIBUTING.md README.md\\\
                         RELEASING.md SECURITY.md example docs
 
-Name:           golang-google-genproto-googleapis
+Name:           golang-google-genproto
 Version:        0
 Release:        %autorelease -b 100
 Summary:        Generated code for Google Cloud client libraries
