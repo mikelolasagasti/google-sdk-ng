@@ -17,16 +17,6 @@ Version:                1.59.0
 %global common_description %{expand:
 The Go language implementation of GRPC, http/2 based rpc.}
 
-# This should be removed in Fedora 39
-%global godevelheader0  %{expand:
-# This package used to be split up to solve a bootstrapping issue.
-# golang-google-grpc-status-devel has since been merged with
-# the main -devel package, so we need this to ensure a smooth update path.
-# See https://bugzilla.redhat.com/2109630
-Provides: golang-google-grpc-status-devel = %{?epoch:epoch:}%{version}-%{release}
-Obsoletes: golang-google-grpc-status-devel < 1.48.0-2
-}
-
 %global golicenses      LICENSE NOTICE.txt
 %global godocs          examples AUTHORS CODE-OF-CONDUCT.md CONTRIBUTING.md\\\
                         GOVERNANCE.md MAINTAINERS.md README.md SECURITY.md\\\
