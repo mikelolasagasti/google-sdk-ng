@@ -38,6 +38,10 @@ Source:         %{gosource}
 %goprep
 %autopatch -p1
 
+# Remove dependency on stackdriver due to dependency issues
+# golang-contrib-opencensus-exporter-stackdriver-devel
+rm -rf gcp/observability interop/observability/
+
 %if %{without bootstrap}
 %generate_buildrequires
 %go_generate_buildrequires
